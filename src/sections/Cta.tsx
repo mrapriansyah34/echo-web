@@ -3,6 +3,7 @@ import { MessageCircle } from 'lucide-react'
 import { brand } from '../content'
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { Reveal } from '../components/Reveal'
 import { useLocale } from '../lib/i18n'
 
@@ -23,6 +24,7 @@ export function Cta() {
               aria-hidden
               className="absolute -bottom-28 -left-16 size-64 rounded-full bg-sage/10 blur-3xl"
             />
+            <FlyingSwallows />
 
             <div className="relative grid min-w-0 gap-10 p-7 sm:p-14 lg:grid-cols-12 lg:items-center lg:gap-14">
               <div className="min-w-0 lg:col-span-5">

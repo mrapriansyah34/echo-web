@@ -1,40 +1,155 @@
+import { useEffect, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
+import { useReducedMotion } from 'motion/react'
+
 import { cx } from '../lib/cx'
 
-// Swiftlet silhouette — long swept wings, forked tail. Decorative only.
-const BIRD =
-  'M60 10c4 0 7 3 12 4 9 2 21 2 33 5-10 4-23 5-33 4 8 5 15 13 20 25-9-9-18-17-26-23-2 5-4 10-6 17-2-7-4-12-6-17-8 6-17 14-26 23 5-12 12-20 20-25-10 1-23 0-33-4 12-3 24-3 33-5 5-1 8-4 12-4z'
+// Decorative flock, built from the swallow silhouettes supplied by the client.
+// Each section carries its own flock: the birds cross once when that section
+// scrolls into view and then stop, restarting only after the section leaves the
+// viewport and comes back. Nothing loops while someone is reading.
+const FLIGHT_MS = 15000
 
-const flock = [
-  { size: 66, top: '13%', duration: 38, delay: 0, flap: 1.15, tone: 'text-gold/60' },
-  { size: 40, top: '26%', duration: 30, delay: -11, flap: 0.85, tone: 'text-gold/40' },
-  { size: 50, top: '5%', duration: 46, delay: -26, flap: 1.35, tone: 'text-ink-soft/30' },
+type Bird = {
+  pose: number
+  beat?: number
+  size: number
+  top: string
+  path: 1 | 2 | 3 | 4
+  bank: 1 | 2 | 3 | 4
+  duration: number
+  delay: number
+  tilt?: number
+}
+
+const FLOCK: Bird[] = [
+  { pose: 0, size: 92, top: '9%', path: 1, bank: 1, duration: 12, delay: 0.1, tilt: 2 },
+  { pose: 4, beat: 5, size: 68, top: '24%', path: 3, bank: 3, duration: 11, delay: 0.7, tilt: -2 },
+  { pose: 1, beat: 2, size: 56, top: '38%', path: 2, bank: 2, duration: 10, delay: 1.2 },
+  { pose: 5, size: 62, top: '55%', path: 4, bank: 4, duration: 9.5, delay: 0.4, tilt: 3 },
+  { pose: 3, beat: 1, size: 44, top: '17%', path: 2, bank: 2, duration: 10.5, delay: 1.6 },
+  { pose: 2, beat: 1, size: 48, top: '63%', path: 3, bank: 3, duration: 11.5, delay: 1.9 },
 ]
 
-// The birds live behind the hero content, so they read as atmosphere rather
-// than a graphic. Reduced-motion users get no animation (the global rule
-// stops it), leaving the hero clean.
-export function FlyingSwallows({ className }: { className?: string }) {
+export function FlyingSwallows({
+  className,
+  variant = 'quiet',
+}: {
+  className?: string
+  /** `hero` runs the full flock over the opening section; `quiet` is the lighter page-wide pass. */
+  variant?: 'hero' | 'quiet'
+}) {
+  const reduceMotion = useReducedMotion()
+  const flock = variant === 'hero' ? FLOCK : FLOCK.slice(0, 4)
+  const rootRef = useRef<HTMLDivElement>(null)
+  const [flying, setFlying] = useState(false)
+  const [runId, setRunId] = useState(0)
+
+  useEffect(() => {
+    if (reduceMotion) return
+    const el = rootRef.current
+    if (!el) return
+
+    let inView = false
+    let stopTimer: number | undefined
+
+    const stop = () => {
+      window.clearTimeout(stopTimer)
+      setFlying(false)
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visible = entry.isIntersecting && entry.intersectionRatio >= 0.15
+        if (visible === inView) return
+        inView = visible
+
+        if (!visible) {
+          stop()
+          return
+        }
+
+        // Re-key so the flock restarts from off-screen, then clear it once the
+        // last bird has left so the page never shows a looping flight.
+        start()
+      },
+      { threshold: [0, 0.15] },
+    )
+
+    observer.observe(el)
+
+    // A visitor lands at the top of the page, so start the first pass straight
+    // away. The observer still owns replays when the hero is left and revisited.
+    const start = () => {
+      setRunId((id) => id + 1)
+      setFlying(true)
+      window.clearTimeout(stopTimer)
+      stopTimer = window.setTimeout(() => setFlying(false), FLIGHT_MS)
+    }
+
+    const rect = el.getBoundingClientRect()
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      inView = true
+      start()
+    }
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(stopTimer)
+    }
+  }, [reduceMotion])
+
   return (
-    <div aria-hidden className={cx('pointer-events-none absolute inset-x-0 top-0 bottom-16 overflow-hidden', className)}>
-      {flock.map((bird) => (
-        <span
-          key={bird.duration}
-          className={cx('absolute left-0 block', bird.tone)}
-          style={{
-            top: bird.top,
-            width: bird.size,
-            animation: `bird-fly ${bird.duration}s linear ${bird.delay}s infinite`,
-          }}
-        >
-          <svg
-            viewBox="0 0 120 64"
-            className="h-auto w-full"
-            style={{ animation: `bird-flap ${bird.flap}s ease-in-out infinite` }}
+    <div
+      ref={rootRef}
+      aria-hidden
+      className={cx(
+        'pointer-events-none absolute inset-0 overflow-hidden',
+        variant === 'quiet' && 'flock-quiet',
+        className,
+      )}
+    >
+      {flying &&
+        flock.map((bird, index) => (
+          <div
+            key={`${runId}-${index}`}
+            className="bird"
+            style={
+              {
+                '--y': bird.top,
+                '--s': `${bird.size}px`,
+                '--dur': `${bird.duration}s`,
+                '--delay': `${bird.delay}s`,
+              } as CSSProperties
+            }
           >
-            <path d={BIRD} fill="currentColor" />
-          </svg>
-        </span>
-      ))}
+            <div className={cx('bird-track', `bird-path-${bird.path}`)}>
+              <div className={cx('bird-bank', `bird-bank-${bird.bank}`)}>
+                <div className="bird-body" style={bird.tilt ? { transform: `rotate(${bird.tilt}deg)` } : undefined}>
+                  <img
+                    src={`/images/swallow-${bird.pose}.png`}
+                    alt=""
+                    width={220}
+                    height={220}
+                    draggable={false}
+                    className="bird-pose"
+                  />
+                  {bird.beat !== undefined && (
+                    <img
+                      src={`/images/swallow-${bird.beat}.png`}
+                      alt=""
+                      width={220}
+                      height={220}
+                      draggable={false}
+                      className="bird-pose bird-beat"
+                      style={{ animationDuration: `${0.34 + (index % 3) * 0.06}s` }}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
     </div>
   )
 }

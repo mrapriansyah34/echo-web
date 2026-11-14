@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Minus, Plus } from 'lucide-react'
 
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { Reveal } from '../components/Reveal'
 import { useLocale } from '../lib/i18n'
 
@@ -11,8 +12,9 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="scroll-mt-28 border-t border-hair py-20 lg:py-28">
-      <Container>
+    <section id="faq" className="relative scroll-mt-28 overflow-hidden border-t border-hair py-20 lg:py-28">
+      <FlyingSwallows />
+      <Container className="relative">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <Reveal>

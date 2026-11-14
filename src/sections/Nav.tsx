@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Menu, ShoppingBag, X } from 'lucide-react'
-import { motion, useScroll } from 'motion/react'
+import { AnimatePresence, motion, useScroll } from 'motion/react'
 
 import { brand } from '../content'
 import { useLocale } from '../lib/i18n'
@@ -10,7 +10,7 @@ import { Logo } from '../components/Logo'
 import { Preferences } from '../components/Preferences'
 
 export function Nav() {
-  const { count, setOpen } = useStore()
+  const { count, setOpen, restored } = useStore()
   const { c } = useLocale()
   const [menuOpen, setMenuOpen] = useState(false)
   const { scrollYProgress } = useScroll()
@@ -53,6 +53,21 @@ export function Nav() {
             >
               {c.nav.cta.label}
             </a>
+
+            <AnimatePresence>
+              {restored && (
+                <motion.span
+                  initial={{ opacity: 0, x: 8 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 8 }}
+                  transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+                  className="hidden items-center gap-1.5 text-[10.5px] uppercase tracking-[0.16em] text-gold sm:inline-flex"
+                >
+                  <span className="size-1.5 rounded-full bg-gold" aria-hidden />
+                  {c.nav.cartRestored}
+                </motion.span>
+              )}
+            </AnimatePresence>
 
             <button
               type="button"

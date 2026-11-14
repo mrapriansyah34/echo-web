@@ -1,7 +1,7 @@
 import { brand } from '../content'
 import { cx } from '../lib/cx'
 
-// RN.CURATED is the official partner mark — always shown as a quiet gold tag
+// Wellness Club is the official partner mark — always shown as a quiet gold tag
 // so it reads as a credential rather than another line of small print.
 export function PartnerMark({ className }: { className?: string }) {
   return (

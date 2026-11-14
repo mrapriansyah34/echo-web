@@ -1,5 +1,6 @@
 import { brand } from '../content'
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { Logo } from '../components/Logo'
 import { PartnerMark } from '../components/PartnerMark'
 import { useLocale } from '../lib/i18n'
@@ -9,8 +10,9 @@ export function Footer() {
   const { footer } = c
 
   return (
-    <footer className="border-t border-hair bg-paper pt-16">
-      <Container>
+    <footer className="relative border-t border-hair bg-paper pt-16">
+      <FlyingSwallows />
+      <Container className="relative">
         <div className="grid gap-12 border-b border-hair pb-14 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo />

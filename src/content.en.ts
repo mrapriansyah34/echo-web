@@ -13,24 +13,26 @@ export const en: Copy = {
       { label: 'FAQ', href: '#faq' },
     ],
     cta: { label: 'Order via WhatsApp' },
-    announcement: 'Ships across Indonesia · Free shipping on orders above Rp 2,000,000',
+    announcement: 'Ships across Indonesia · Free shipping on orders over Rp 2,000,000',
     cartLabel: 'Cart',
     cartAria: 'Open cart',
+    cartRestored: 'Restored',
     menuAria: 'Open menu',
     themeLabel: 'Theme & language',
+    backToTop: 'back to top',
   },
   hero: {
     eyebrow: 'Pure edible bird’s nest · Since 2012',
     title: ['A luxury you', 'sip every', 'morning'],
     description:
-      'Hand-picked swallow nests from the caves of the Indonesian archipelago, cold-processed without preservatives. Served in 70 ml glass jars — three and a half grams of pure nest in every serving.',
+      'Hand-picked swiftlet nests from caves across the Indonesian archipelago, cold-processed without preservatives. Each 70 ml glass jar holds three and a half grams of pure nest.',
     primary: { label: 'Explore the collection', href: '#koleksi' },
-    secondary: { label: 'Ask us first', href: '#tanya' },
-    facts: ['100% Organic', 'Vacuum sealed', '3.5 g pure nest per jar'],
-    captions: ["Bird's Nest in Jar · Set of 8", 'Dry nest · 100 grams'],
+    secondary: { label: 'Talk to us first', href: '#tanya' },
+    facts: ['Naturally harvested', 'Vacuum sealed', '3.5 g of pure nest per jar'],
+    captions: ["Bottled Bird's Nest · Set of 8", 'Dried nest · 100 g'],
     coldServed: 'Served chilled',
-    imageAlt: 'Set of 8 Signature Gold',
-    imageAltSecondary: '100 gram dry nest',
+    imageAlt: 'Set of 8 bottles of ECHO Nusantara bird’s nest',
+    imageAltSecondary: '100 g of dried nest',
   },
   marquee: [
     "Edible bird's nest from the archipelago",
@@ -42,13 +44,13 @@ export const en: Copy = {
   ],
   collection: {
     eyebrow: 'N° 01 — Collection',
-    title: 'Eight packages, one standard.',
+    title: 'Eight sets, one standard.',
     description:
-      'Every jar holds 3.5 grams of pure edible bird’s nest. Pick the portion that suits you, or start with the smallest.',
-    footnote: 'Date · Pandan variants',
+      'Every jar holds 3.5 grams of pure edible bird’s nest. Pick the portion that suits you — or start with the smallest.',
+    footnote: 'Date & pandan flavours',
     footnoteShapes: 'Cup · Strips · Triangle shapes',
     saveNote: 'Special price',
-    askPrice: 'Ask for price',
+    askPrice: 'Ask for pricing',
     askAdmin: 'Ask us',
     add: 'Add to bag',
     added: 'Added to bag',
@@ -57,19 +59,19 @@ export const en: Copy = {
     stockLeft: '{n} left of {max}',
     stockLow: 'Low stock — {n} left',
     stockEmpty: 'Sold out — ask about restock',
-    askMessage: 'Hello ECHO Nusantara, I would like to ask the price of {name} ({set}).',
+    askMessage: 'Hello ECHO Nusantara, could you tell me the price of {name} ({set})?',
   },
   story: {
     caption: 'Limestone cave · East Kalimantan',
     sideNote: 'Harvested without disturbing active nests. One nest, one origin card.',
     certified: 'Certified',
-    imageAlt: 'A swiftlet house on a riverbank in East Kalimantan',
+    imageAlt: 'A limestone cave in East Kalimantan',
   },
   craft: {
     eyebrow: 'N° 03 — Story',
     title: 'From the archipelago to your table.',
     body: [
-      'Edible bird’s nests in the Indonesian archipelago form from swiftlet saliva that hardens on limestone cave walls. We take only nests that have been abandoned, then clean them without chemicals.',
+      'Bird’s nests form from swiftlet saliva that hardens on the limestone walls of caves across the Indonesian archipelago. We harvest only abandoned nests, then clean them without chemicals.',
       'Every nest is sorted by hand under light, weighed, and cold-processed so its texture stays whole. The result is not a supplement — it is a dish.',
     ],
     specs: [
@@ -83,7 +85,7 @@ export const en: Copy = {
   },
   ritual: {
     eyebrow: 'N° 04 — Ritual',
-    title: 'Three minutes, every morning.',
+    title: 'Three steps, every morning.',
     intro:
       'No heating, no added sugar. Bird’s nest already carries its own gentle flavour — your only task is to serve it calmly.',
     stepLabel: 'Step',
@@ -91,12 +93,12 @@ export const en: Copy = {
       {
         index: 'I',
         title: 'Chill',
-        body: 'Leave the jar in the fridge overnight. At 4 °C the nest turns softer and the date flavour settles.',
+        body: 'Leave the jar in the fridge overnight. At 4 °C the nest softens and the date flavour settles.',
       },
       {
         index: 'II',
         title: 'Stir gently',
-        body: 'Stir slowly with a clean spoon — never shake hard. The nest spreads evenly without breaking apart.',
+        body: 'Stir slowly with a clean spoon — never shake it hard. The nest spreads evenly without breaking apart.',
       },
       {
         index: 'III',
@@ -107,33 +109,37 @@ export const en: Copy = {
   },
   benefits: {
     eyebrow: 'N° 05 — Benefits',
-    title: '98% clean, ready to brew.',
+    title: '98% pure, ready to cook.',
     description:
-      'Sorted by hand, cleaned without chemicals, then packed hygienically. The result is nest you can cook whenever you like.',
+      'Sorted by hand, cleaned without chemicals, then packed hygienically. The result is a nest you can cook whenever you like.',
     items: [
       {
-        title: '98% clean & ready to brew',
-        body: 'Processed to a high hygiene standard so it is easier to handle and quicker to prepare.',
+        title: '98% pure, ready to cook',
+        body: 'Processed to a high hygiene standard, so it is easier to handle and quicker to prepare.',
       },
       {
         title: 'Sorted one by one',
         body: 'Every product is checked for quality before it ships — nothing leaves without inspection.',
       },
       {
-        title: 'Naturally, nothing added',
+        title: 'All natural, nothing added',
         body: 'Moisture control keeps the shape and integrity of the nest intact in transit.',
       },
     ],
+    imageAlt: 'Brewed bird’s nest in a glass bowl',
+    jarAlt: 'ECHO Nusantara jar with its benefits label',
+    funFactAlt: 'A person holding an ECHO Nusantara jar',
     funFact: {
       title: 'Did you know?',
-      body: 'Most of the immune system is linked to the gut — which makes what you consume matter for whole-body health.',
+      body: 'Much of the immune system is linked to the gut — so what you eat matters for whole-body health.',
     },
   },
   brew: {
-    eyebrow: 'How to brew — dry nest',
+    eyebrow: 'How to prepare — dried nest',
+    imageAlt: 'Four steps for brewing dried bird’s nest',
     title: 'Four steps, one bowl.',
     description:
-      'For dry nest, brew it at home. No special equipment — a steamer and a glass bowl are enough.',
+      'Dried nest is prepared at home. No special equipment — a steamer and a glass bowl are enough.',
     steps: [
       {
         index: '1',
@@ -148,35 +154,35 @@ export const en: Copy = {
       {
         index: '3',
         title: 'Savour',
-        body: 'Serve warm, or pair it with fruit, herbs and warm spice.',
+        body: 'Serve warm, or pair it with fruit, herbs and gentle spices.',
       },
       {
         index: '4',
         title: 'Store',
-        body: 'Keep it in a clean container, chill, and finish within 2–3 days.',
+        body: 'Keep it in a clean container, chilled, and finish it within 2–3 days.',
       },
     ],
   },
   testimonials: {
     eyebrow: 'N° 06 — Reviews',
     title: 'From those who have tried it.',
-    note: 'Verified buyer reviews',
+    note: 'Verified reviews from our customers',
     items: [
       {
         quote:
-          'I ordered the Set of 8 for my mother’s birthday. The box is beautiful, and the origin card makes the gift feel truly considered.',
+          'I ordered the Set of 8 for my mother’s birthday. The box is beautiful, and the origin card makes the gift feel genuinely thoughtful.',
         name: 'Nadia Prameswari',
         role: 'Jakarta',
       },
       {
         quote:
-          'It tastes clean, with no fishy note at all. The pandan is fragrant without being too sweet. I have been a regular for a year.',
+          'It tastes clean — not at all fishy. The pandan is fragrant without being overly sweet. I’ve been ordering for a year now.',
         name: 'Rendra Halim',
         role: 'Surabaya',
       },
       {
         quote:
-          'Ordering happens over WhatsApp, replies are quick, and it reached Makassar in two days. I love that I did not need an account.',
+          'I ordered over WhatsApp, got a quick reply, and it reached Makassar in two days. I love that I didn’t need an account.',
         name: 'Melati Anjani',
         role: 'Makassar',
       },
@@ -189,7 +195,7 @@ export const en: Copy = {
     items: [
       {
         q: 'How do I place an order?',
-        a: 'Choose a variant, add it to the cart, then fill in your name, address and courier. The “Send order to WhatsApp” button opens our official chat with the order details and an invoice number already prepared. Payment is arranged once our team confirms stock.',
+        a: 'Choose a variant, add it to the cart, then fill in your name, address and courier. The “Send order to WhatsApp” button opens our official chat with your order details and an invoice number ready to go. Payment is arranged once our team confirms stock.',
       },
       {
         q: 'Which couriers do you use?',
@@ -197,19 +203,19 @@ export const en: Copy = {
       },
       {
         q: 'Are products shipped cold?',
-        a: 'Ready-to-drink products travel in insulated packaging with ice gel. Refrigerate them as soon as they arrive. Dry nest only needs a cool, dry place.',
+        a: 'Ready-to-drink products travel in insulated packaging with ice gel. Refrigerate them as soon as they arrive. Dried nest only needs a cool, dry place.',
       },
       {
-        q: 'How long does the ready-to-drink last?',
+        q: 'How long does the ready-to-drink nest keep?',
         a: 'Fourteen days in the fridge, with no preservatives. The production date is printed under each jar.',
       },
       {
         q: 'Can it be sent as a gift?',
-        a: 'Yes. Write your message in the notes field at checkout — we include a greeting card and hide the price from the recipient.',
+        a: 'Yes. Add your message in the notes field at checkout — we include a greeting card and hide the price from the recipient.',
       },
       {
         q: 'What if the parcel arrives damaged?',
-        a: 'Send photos of the packaging and jar contents to our WhatsApp within 24 hours of delivery. We replace it at no extra cost.',
+        a: 'Send photos of the packaging and the jar to our WhatsApp within 24 hours of delivery, and we will replace it at no extra cost.',
       },
     ],
   },
@@ -225,9 +231,9 @@ export const en: Copy = {
   },
   footer: {
     blurb:
-      'Pure edible bird’s nest from the Indonesian archipelago. Cold-processed, preservative-free, shipped from Jakarta across Indonesia.',
+      'Pure edible bird’s nest from the Indonesian archipelago. Cold-processed, preservative-free, and shipped from Jakarta to every corner of Indonesia.',
     columns: [
-      { title: 'Collection', links: ['Ready to drink', 'Dry nest', 'Hampers', 'Corporate orders'] },
+      { title: 'Collection', links: ['Ready to drink', 'Dried nest', 'Hampers', 'Corporate orders'] },
       { title: 'Help', links: ['How to order', 'Shipping', 'Returns', 'Storage'] },
       { title: 'Company', links: ['About us', 'Certification', 'Become a reseller', 'Contact'] },
     ],
@@ -243,37 +249,59 @@ export const en: Copy = {
     ariaLabel: 'Order cart',
     close: 'Close cart',
     remove: 'Remove',
+    clearCart: 'Empty cart',
+    clearConfirm: 'Tap again to remove everything',
+    clearedToast: 'Cart emptied.',
+    itemRemoved: 'Item removed.',
+    undo: 'Undo',
     qtyMinus: 'Decrease quantity',
     qtyPlus: 'Increase quantity',
     emptyTitle: 'Your cart is still empty.',
-    emptyBody: 'Start with the Set of 3 Triple Luxe, or try the 37.8 g dry nest.',
+    emptyBody: 'Start with the Set of 3 Triple Luxe, or try the 37.8 g dried nest.',
     emptyCta: 'View the collection',
     shippingTitle: 'Delivery details',
     name: 'Recipient name',
     namePlaceholder: 'Full name',
     phone: 'WhatsApp number',
-    phonePlaceholder: '08xx xxxx xxxx',
+    countryLabel: 'Country code',
+    phonePlaceholder: '0812-3456-7890',
     address: 'Full address',
     addressPlaceholder: 'Street, number, district, city, postal code',
     courier: 'Courier',
     note: 'Note (optional)',
-    notePlaceholder: 'Gift card, special instructions…',
+    notePlaceholder: 'Gift message, special instructions…',
     subtotal: 'Subtotal',
     subtotalNote: 'Excludes shipping. Confirmed by our team on WhatsApp.',
+    support: 'Our team {phone} · 09.00–20.00 WIB',
+    errors: {
+      name: 'Enter the recipient’s name (at least 2 characters).',
+      phone: 'Enter a WhatsApp number with at least {n} digits.',
+      address: 'Enter a full address (at least 10 characters).',
+      courier: 'Choose a delivery courier.',
+    },
+    errorsSummaryOne: '{n} field needs attention:',
+    errorsSummary: '{n} fields need attention:',
     submit: 'Send order to WhatsApp',
     successEyebrow: 'Invoice',
     successTitle: 'Your order is ready.',
     successBody:
-      'Your order summary is prepared and a WhatsApp tab has opened. Press send in WhatsApp so our team can confirm stock and shipping.',
+      'Your order summary is ready and WhatsApp has opened in a new tab. Send the message there so our team can confirm stock and shipping.',
     openWhatsApp: 'Open WhatsApp',
     keepShopping: 'Keep shopping',
     invoiceNote: 'Keep the invoice number to track your parcel.',
     order: {
-      heading: 'ECHO NUSANTARA ORDER',
+      heading: 'ECHO NUSANTARA — NEW ORDER',
       invoice: 'Invoice',
+      date: 'Date',
+      itemsHeading: 'ORDER SUMMARY',
+      itemsCount: '{n} items',
+      itemsCountOne: '{n} item',
+      totalHeading: 'TOTAL',
+      deliveryHeading: 'DELIVERY DETAILS',
       variant: 'Variant',
       subtotal: 'Subtotal',
       excludes: 'excl. shipping',
+      shippingPending: 'Shipping: to be confirmed by our team',
       name: 'Name',
       phone: 'WhatsApp',
       address: 'Address',
@@ -297,10 +325,10 @@ export const collectionsEn: typeof import('./content').collections = [
   {
     id: 'kering',
     index: '02',
-    title: 'Dry nest',
-    subtitle: 'AAA Grade',
+    title: 'Dried nest',
+    subtitle: 'Grade AAA',
     description:
-      'Raw nest cleaned to 98% and sorted one by one. Available as cup, strips and triangle.',
+      'Raw nest cleaned to 98% and sorted one by one. Available in cup, strip and triangle shapes.',
     products: dry,
   },
   {
@@ -324,7 +352,7 @@ export type ProductText = {
 
 export const productTextEn: Record<string, ProductText> = {
   'triple-luxe': {
-    name: 'Triple Luxe Serve',
+    name: 'Triple Luxe Set',
     setLabel: 'Set of 3',
     volume: '3 × 70 ml',
     tagline: 'An introduction — three jars for three mornings.',
@@ -336,49 +364,49 @@ export const productTextEn: Record<string, ProductText> = {
     },
   },
   'signature-gold': {
-    name: "Bird's Nest in Jar",
+    name: "Bottled Bird's Nest",
     setLabel: 'Set of 8',
     volume: '8 × 70 ml',
-    tagline: 'Our most-gifted set, packed in a kraft box.',
+    tagline: 'Our most gifted set, packed in a kraft box.',
     variants: { 'pandan4-kurma4': 'Pandan 4 · Date 4', 'kurma-8': 'Date 8', 'pandan-8': 'Pandan 8' },
   },
   'signature-diamond': {
-    name: "Bird's Nest in Jar",
+    name: "Bottled Bird's Nest",
     setLabel: 'Set of 16',
     volume: '16 × 70 ml',
     tagline: 'For the whole family and a truly special gift.',
     variants: { 'pandan8-kurma8': 'Pandan 8 · Date 8', 'kurma-16': 'Date 16', 'pandan-16': 'Pandan 16' },
   },
   'sultan-pack': {
-    name: "Bird's Nest in Jar",
+    name: "Bottled Bird's Nest",
     setLabel: 'Set of 30',
     volume: '30 × 70 ml',
     tagline: 'A full month. The best price per jar.',
     variants: { 'pandan15-kurma15': 'Pandan 15 · Date 15', 'kurma-30': 'Date 30', 'pandan-30': 'Pandan 30' },
   },
   'dry-37': {
-    name: "Dry Bird's Nest 37.8 g",
+    name: "Dried Bird's Nest 37.8 g",
     setLabel: 'Trial size',
     volume: '37.8 grams',
-    tagline: 'The best place to start with dry nest.',
+    tagline: 'The best place to start with dried nest.',
     variants: { cup: 'Cup', strips: 'Strips', triangle: 'Triangle' },
   },
   'dry-100': {
-    name: "Dry Bird's Nest 100 g",
+    name: "Dried Bird's Nest 100 g",
     setLabel: 'Monthly portion',
     volume: '100 grams',
     tagline: 'Enough for about twenty brews.',
     variants: { cup: 'Cup', strips: 'Strips', triangle: 'Triangle' },
   },
   'dry-500': {
-    name: "Dry Bird's Nest 500 g",
+    name: "Dried Bird's Nest 500 g",
     setLabel: 'Family portion',
     volume: '500 grams',
     tagline: 'Keeps well, brewed whenever you like.',
     variants: { cup: 'Cup', strips: 'Strips', triangle: 'Triangle' },
   },
   'dry-1kg': {
-    name: "Dry Bird's Nest 1 kg",
+    name: "Dried Bird's Nest 1 kg",
     setLabel: 'Royal Masterpiece',
     volume: '1 kilogram',
     tagline: 'The master collection. For a gift never forgotten.',
@@ -387,14 +415,14 @@ export const productTextEn: Record<string, ProductText> = {
   'hamper-aurora': {
     name: 'Aurora',
     setLabel: 'Christmas Hamper',
-    volume: '8 jars + 75 g dry nest',
-    tagline: 'Pandan & date, 75 g of AAA dry nest, and goji berries.',
+    volume: '8 jars + 75 g dried nest',
+    tagline: 'Pandan & date, 75 g of AAA dried nest, and goji berries.',
   },
   'hamper-reverie': {
     name: 'Reverie',
     setLabel: 'Christmas Hamper',
-    volume: '3 jars + 37.8 g dry nest',
-    tagline: 'Three pandan & date jars with 37.8 g of AAA dry nest.',
+    volume: '3 jars + 37.8 g dried nest',
+    tagline: 'Three pandan & date jars with 37.8 g of AAA dried nest.',
   },
   'hamper-serenity': {
     name: 'Serenity',

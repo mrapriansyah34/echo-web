@@ -1,4 +1,5 @@
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { Reveal } from '../components/Reveal'
 import { useLocale } from '../lib/i18n'
 
@@ -7,15 +8,16 @@ export function Brew() {
   const { brew } = c
 
   return (
-    <section id="seduh" className="scroll-mt-28 py-20 lg:py-28">
-      <Container>
+    <section id="seduh" className="relative scroll-mt-28 overflow-hidden py-20 lg:py-28">
+      <FlyingSwallows />
+      <Container className="relative">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <Reveal y={24}>
               <div className="relative aspect-square overflow-hidden border border-hair bg-paper-2">
                 <img
                   src="/images/konten-cara-seduh.jpg"
-                  alt="Empat langkah menyeduh sarang burung walet kering"
+                  alt={brew.imageAlt}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />

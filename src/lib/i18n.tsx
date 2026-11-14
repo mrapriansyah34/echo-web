@@ -14,12 +14,12 @@ const meta = {
   en: {
     title: "ECHO Nusantara — Premium Edible Bird's Nest",
     description:
-      'Pure AAA edible bird\'s nest from the Indonesian archipelago. Ready to drink and dry, preservative-free. Order directly via WhatsApp, shipped across Indonesia.',
+      'Grade AAA edible bird\'s nest from the Indonesian archipelago. Ready-to-drink jars and dried nest, preservative-free. Order directly on WhatsApp, shipped across Indonesia.',
   },
   id: {
     title: 'ECHO Nusantara — Sarang Burung Walet Premium',
     description:
-      'Sarang burung walet murni AAA grade dari Nusantara. Siap minum dan kering, tanpa pengawet. Pesan langsung via WhatsApp, kirim ke seluruh Indonesia.',
+      'Sarang burung walet Grade AAA dari Nusantara. Botol siap minum dan sarang kering, tanpa pengawet. Pesan langsung via WhatsApp, dikirim ke seluruh Indonesia.',
   },
 }
 

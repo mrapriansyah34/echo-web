@@ -4,7 +4,7 @@
 export const brand = {
   name: 'ECHO NUSANTARA',
   line: 'Official Partner',
-  partner: 'RN.CURATED',
+  partner: 'Wellness Club',
   whatsapp: '6281399387499',
   whatsappDisplay: '+62 813-9938-7499',
   instagram: '@echo.nusantara',
@@ -23,8 +23,10 @@ export const nav = {
   announcement: 'Kirim seluruh Indonesia · Gratis ongkir untuk pesanan di atas Rp 2.000.000',
   cartLabel: 'Keranjang',
   cartAria: 'Buka keranjang',
+  cartRestored: 'Dipulihkan',
   menuAria: 'Buka menu',
   themeLabel: 'Tampilan & bahasa',
+  backToTop: 'kembali ke atas',
 }
 
 export const hero = {
@@ -34,10 +36,10 @@ export const hero = {
     'Sarang burung walet pilihan dari gua-gua Nusantara, diolah dingin dan tanpa pengawet. Disajikan dalam jar kaca 70 ml — tiga setengah gram walet murni di setiap sajian.',
   primary: { label: 'Jelajahi koleksi', href: '#koleksi' },
   secondary: { label: 'Konsultasi dulu', href: '#tanya' },
-  facts: ['100% Organik', 'Vakum tersegel', '3,5 g walet murni per jar'],
-  captions: ["Bird's Nest in Jar · Set of 8", 'Sarang kering · 100 gram'],
+  facts: ['Dipanen alami', 'Vakum tersegel', '3,5 g walet murni per jar'],
+  captions: ["Bottled Bird's Nest · Set of 8", 'Sarang kering · 100 gram'],
   coldServed: 'Disajikan dingin',
-  imageAlt: 'Set of 8 Signature Gold',
+  imageAlt: 'Set of 8 botol sarang burung walet ECHO Nusantara',
   imageAltSecondary: 'Sarang kering 100 gram',
 }
 
@@ -79,7 +81,7 @@ export type Product = {
 export const drinks: Product[] = [
   {
     id: 'triple-luxe',
-    name: 'Triple Luxe Serve',
+    name: 'Triple Luxe Set',
     kind: 'drink',
     setLabel: 'Set of 3',
     volume: '3 × 70 ml',
@@ -97,11 +99,11 @@ export const drinks: Product[] = [
   },
   {
     id: 'signature-gold',
-    name: "Bird's Nest in Jar",
+    name: "Bottled Bird's Nest",
     kind: 'drink',
     setLabel: 'Set of 8',
     volume: '8 × 70 ml',
-    tagline: 'Hampers paling dicari, dikemas dalam kotak kraft.',
+    tagline: 'Set paling sering dihadiahkan, dikemas dalam kotak kraft.',
     price: 1874999,
     stock: 50,
     maxStock: 50,
@@ -114,7 +116,7 @@ export const drinks: Product[] = [
   },
   {
     id: 'signature-diamond',
-    name: "Bird's Nest in Jar",
+    name: "Bottled Bird's Nest",
     kind: 'drink',
     setLabel: 'Set of 16',
     volume: '16 × 70 ml',
@@ -131,7 +133,7 @@ export const drinks: Product[] = [
   },
   {
     id: 'sultan-pack',
-    name: "Bird's Nest in Jar",
+    name: "Bottled Bird's Nest",
     kind: 'drink',
     setLabel: 'Set of 30',
     volume: '30 × 70 ml',
@@ -151,7 +153,7 @@ export const drinks: Product[] = [
 export const dry: Product[] = [
   {
     id: 'dry-37',
-    name: "Dry Bird's Nest 37,8 g",
+    name: "Dried Bird's Nest 37,8 g",
     kind: 'dry',
     setLabel: 'Porsi uji',
     volume: '37,8 gram',
@@ -161,14 +163,14 @@ export const dry: Product[] = [
     maxStock: 50,
     artCount: 1,
     variants: [
-      { key: 'cup', label: 'Cup', image: '/images/dry-nest-37-cup.jpg', tone: 'gold', price: 1034999 },
-      { key: 'strips', label: 'Strips', image: '/images/dry-nest-37-strips.jpg', tone: 'gold', price: 734999 },
-      { key: 'triangle', label: 'Triangle', image: '/images/dry-nest-37-triangle.jpg', tone: 'gold', price: 884999 },
+      { key: 'cup', label: 'Mangkuk', image: '/images/dry-nest-37-cup.jpg', tone: 'gold', price: 1034999 },
+      { key: 'strips', label: 'Serat', image: '/images/dry-nest-37-strips.jpg', tone: 'gold', price: 734999 },
+      { key: 'triangle', label: 'Segitiga', image: '/images/dry-nest-37-triangle.jpg', tone: 'gold', price: 884999 },
     ],
   },
   {
     id: 'dry-100',
-    name: "Dry Bird's Nest 100 g",
+    name: "Dried Bird's Nest 100 g",
     kind: 'dry',
     setLabel: 'Porsi bulanan',
     volume: '100 gram',
@@ -178,14 +180,14 @@ export const dry: Product[] = [
     maxStock: 50,
     artCount: 2,
     variants: [
-      { key: 'cup', label: 'Cup', image: '/images/dry-nest-100-cup.jpg', tone: 'gold', price: 2774999 },
-      { key: 'strips', label: 'Strips', image: '/images/dry-nest-100-strips.jpg', tone: 'gold', price: 1964999 },
-      { key: 'triangle', label: 'Triangle', image: '/images/dry-nest-100-triangle.jpg', tone: 'gold', price: 2374999 },
+      { key: 'cup', label: 'Mangkuk', image: '/images/dry-nest-100-cup.jpg', tone: 'gold', price: 2774999 },
+      { key: 'strips', label: 'Serat', image: '/images/dry-nest-100-strips.jpg', tone: 'gold', price: 1964999 },
+      { key: 'triangle', label: 'Segitiga', image: '/images/dry-nest-100-triangle.jpg', tone: 'gold', price: 2374999 },
     ],
   },
   {
     id: 'dry-500',
-    name: "Dry Bird's Nest 500 g",
+    name: "Dried Bird's Nest 500 g",
     kind: 'dry',
     setLabel: 'Porsi keluarga',
     volume: '500 gram',
@@ -195,14 +197,14 @@ export const dry: Product[] = [
     maxStock: 50,
     artCount: 3,
     variants: [
-      { key: 'cup', label: 'Cup', image: '/images/dry-nest-500-cup.jpg', tone: 'gold', price: 13724999 },
-      { key: 'strips', label: 'Strips', image: '/images/dry-nest-500-strips.jpg', tone: 'gold', price: 9724999 },
-      { key: 'triangle', label: 'Triangle', image: '/images/dry-nest-500-triangle.jpg', tone: 'gold', price: 11724999 },
+      { key: 'cup', label: 'Mangkuk', image: '/images/dry-nest-500-cup.jpg', tone: 'gold', price: 13724999 },
+      { key: 'strips', label: 'Serat', image: '/images/dry-nest-500-strips.jpg', tone: 'gold', price: 9724999 },
+      { key: 'triangle', label: 'Segitiga', image: '/images/dry-nest-500-triangle.jpg', tone: 'gold', price: 11724999 },
     ],
   },
   {
     id: 'dry-1kg',
-    name: "Dry Bird's Nest 1 kg",
+    name: "Dried Bird's Nest 1 kg",
     kind: 'dry',
     setLabel: 'Royal Masterpiece',
     volume: '1 kilogram',
@@ -212,9 +214,9 @@ export const dry: Product[] = [
     maxStock: 50,
     artCount: 3,
     variants: [
-      { key: 'cup', label: 'Cup', image: '/images/dry-nest-1kg-cup.jpg', tone: 'gold', price: 27134999 },
-      { key: 'strips', label: 'Strips', image: '/images/dry-nest-1kg-strips.jpg', tone: 'gold', price: 19277999 },
-      { key: 'triangle', label: 'Triangle', image: '/images/dry-nest-1kg-triangle.jpg', tone: 'gold', price: 23254999 },
+      { key: 'cup', label: 'Mangkuk', image: '/images/dry-nest-1kg-cup.jpg', tone: 'gold', price: 27134999 },
+      { key: 'strips', label: 'Serat', image: '/images/dry-nest-1kg-strips.jpg', tone: 'gold', price: 19277999 },
+      { key: 'triangle', label: 'Segitiga', image: '/images/dry-nest-1kg-triangle.jpg', tone: 'gold', price: 23254999 },
     ],
   },
 ]
@@ -226,7 +228,7 @@ export const hampers: Product[] = [
     kind: 'drink',
     setLabel: 'Hampers Natal',
     volume: '8 jar + 75 g sarang kering',
-    tagline: 'Pandan & kurma, 75 g AAA dry bird\'s nest, dan goji berry.',
+    tagline: 'Pandan & kurma, 75 g sarang kering AAA, dan goji berry.',
     price: 3839999,
     stock: 50,
     maxStock: 50,
@@ -283,9 +285,9 @@ export const collections = [
     id: 'kering',
     index: '02',
     title: 'Sarang kering',
-    subtitle: 'AAA Grade',
+    subtitle: 'Grade AAA',
     description:
-      'Sarang mentah dengan tingkat kebersihan 98%, diseleksi satu per satu. Tersedia dalam bentuk cup, strips dan triangle.',
+      'Sarang mentah dengan kemurnian 98%, diseleksi satu per satu. Tersedia dalam bentuk mangkuk, serat, dan segitiga.',
     products: dry,
   },
   {
@@ -307,7 +309,7 @@ export const craft = {
     'Setiap sarang disortir manual di bawah cahaya, ditimbang, dan diolah dingin agar teksturnya tetap utuh. Hasilnya bukan suplemen — melainkan hidangan.',
   ],
   specs: [
-    { value: '98%', label: 'Tingkat kebersihan' },
+    { value: '98%', label: 'Tingkat kemurnian' },
     { value: 'AAA', label: 'Grade sarang' },
     { value: '0', label: 'Bahan pengawet' },
     { value: '3,5 g', label: 'Walet per jar' },
@@ -318,7 +320,7 @@ export const craft = {
 
 export const ritual = {
   eyebrow: 'N° 04 — Ritual',
-  title: 'Tiga menit, setiap pagi.',
+  title: 'Tiga langkah, setiap pagi.',
   intro:
     'Tidak perlu dipanaskan, tidak perlu ditambah gula. Sarang walet sudah punya rasa lembutnya sendiri — tugas Anda hanya menyajikannya dengan tenang.',
   stepLabel: 'Langkah',
@@ -343,12 +345,12 @@ export const ritual = {
 
 export const benefits = {
   eyebrow: 'N° 05 — Manfaat',
-  title: 'Bersih 98%, siap diseduh.',
+  title: 'Kemurnian 98%, siap diseduh.',
   description:
     'Sarang disortir manual, dibersihkan tanpa bahan kimia, lalu dikemas higienis. Hasilnya sarang yang siap dimasak kapan pun Anda mau.',
   items: [
     {
-      title: '98% bersih & siap seduh',
+      title: '98% murni, siap diseduh',
       body: 'Diproses dengan standar higiene tinggi agar lebih mudah ditangani dan cepat disiapkan.',
     },
     {
@@ -360,14 +362,18 @@ export const benefits = {
       body: 'Kontrol kelembapan menjaga bentuk dan integritas sarang selama pengiriman.',
     },
   ],
-  funFact: {
-    title: 'Tahukah Anda?',
+      imageAlt: 'Sarang burung walet yang sudah diseduh di mangkuk kaca',
+    jarAlt: 'Jar ECHO Nusantara dengan label manfaat',
+    funFactAlt: 'Seseorang memegang jar ECHO Nusantara',
+    funFact: {
+      title: 'Tahukah Anda?',
     body: 'Sebagian besar sistem imun terhubung ke saluran cerna — membuat asupan nutrisi penting untuk kesehatan menyeluruh.',
   },
 }
 
 export const brew = {
   eyebrow: 'Cara menyeduh — sarang kering',
+  imageAlt: 'Empat langkah menyeduh sarang burung walet kering',
   title: 'Empat langkah, satu mangkuk.',
   description:
     'Untuk sarang kering, seduh sendiri di rumah. Tidak perlu alat khusus — cukup panci kukus dan mangkuk kaca.',
@@ -492,11 +498,11 @@ export const couriers = [
 
 export const collectionCopy = {
   eyebrow: 'N° 01 — Koleksi',
-  title: 'Delapan kemasan, satu standar.',
+  title: 'Delapan set, satu standar.',
   description:
     'Setiap jar berisi 3,5 gram sarang burung walet murni. Pilih porsi yang sesuai, atau mulai dari yang terkecil.',
-  footnote: 'Varian kurma · pandan',
-  footnoteShapes: 'Bentuk cup · strips · triangle',
+  footnote: 'Rasa kurma & pandan',
+  footnoteShapes: 'Bentuk mangkuk · serat · segitiga',
   saveNote: 'Harga khusus',
   askPrice: 'Tanya harga',
   askAdmin: 'Tanya admin',
@@ -514,7 +520,7 @@ export const storyCopy = {
   caption: 'Gua kapur · Kalimantan Timur',
   sideNote: 'Dipanen tanpa merusak sarang aktif. Satu sarang, satu kartu asal.',
   certified: 'Tersertifikasi',
-  imageAlt: 'Rumah walet di tepi sungai, Kalimantan Timur',
+  imageAlt: 'Gua kapur di Kalimantan Timur',
 }
 
 export const cartCopy = {
@@ -523,16 +529,22 @@ export const cartCopy = {
   ariaLabel: 'Keranjang pesanan',
   close: 'Tutup keranjang',
   remove: 'Hapus',
+  clearCart: 'Kosongkan keranjang',
+  clearConfirm: 'Ketuk lagi untuk menghapus semua',
+  clearedToast: 'Keranjang dikosongkan.',
+  itemRemoved: 'Item dihapus.',
+  undo: 'Urungkan',
   qtyMinus: 'Kurangi jumlah',
   qtyPlus: 'Tambah jumlah',
   emptyTitle: 'Keranjang masih kosong.',
-  emptyBody: 'Mulai dari Set of 3 Triple Luxe, atau pilih sarang kering 37,8 gram untuk mencoba.',
+  emptyBody: 'Mulai dari Set of 3 Triple Luxe, atau coba sarang kering 37,8 g.',
   emptyCta: 'Lihat koleksi',
   shippingTitle: 'Data pengiriman',
   name: 'Nama penerima',
   namePlaceholder: 'Nama lengkap',
   phone: 'Nomor WhatsApp',
-  phonePlaceholder: '08xx xxxx xxxx',
+  countryLabel: 'Kode negara',
+  phonePlaceholder: '0812-3456-7890',
   address: 'Alamat lengkap',
   addressPlaceholder: 'Jalan, nomor, kelurahan, kota, kode pos',
   courier: 'Kurir',
@@ -540,20 +552,36 @@ export const cartCopy = {
   notePlaceholder: 'Kartu ucapan, instruksi khusus…',
   subtotal: 'Subtotal',
   subtotalNote: 'Belum termasuk ongkir. Dikonfirmasi admin via WhatsApp.',
+  support: 'Admin {phone} · 09.00–20.00 WIB',
+  errors: {
+    name: 'Nama penerima minimal 2 karakter.',
+    phone: 'Nomor WhatsApp minimal {n} digit angka.',
+    address: 'Tulis alamat lengkap, minimal 10 karakter.',
+    courier: 'Pilih kurir pengiriman.',
+  },
+  errorsSummaryOne: 'Ada {n} kolom yang perlu diperbaiki:',
+  errorsSummary: 'Ada {n} kolom yang perlu diperbaiki:',
   submit: 'Kirim pesanan ke WhatsApp',
   successEyebrow: 'Invoice',
-  successTitle: 'Pesanan siap dikirim.',
+  successTitle: 'Pesanan Anda sudah siap.',
   successBody:
     'Ringkasan pesanan sudah tersusun dan tab WhatsApp telah dibuka. Tekan kirim di WhatsApp agar admin kami mengonfirmasi stok dan ongkos kirim.',
   openWhatsApp: 'Buka WhatsApp',
   keepShopping: 'Lanjut belanja',
   invoiceNote: 'Simpan nomor invoice untuk pelacakan kurir.',
   order: {
-    heading: 'PESANAN ECHO NUSANTARA',
+    heading: 'ECHO NUSANTARA — PESANAN BARU',
     invoice: 'Invoice',
+    date: 'Tanggal',
+    itemsHeading: 'RINGKASAN PESANAN',
+    itemsCount: '{n} item',
+    itemsCountOne: '{n} item',
+    totalHeading: 'TOTAL',
+    deliveryHeading: 'DATA PENGIRIMAN',
     variant: 'Varian',
     subtotal: 'Subtotal',
     excludes: 'belum termasuk ongkir',
+    shippingPending: 'Ongkir: menunggu konfirmasi admin',
     name: 'Nama',
     phone: 'WhatsApp',
     address: 'Alamat',

@@ -23,7 +23,7 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-b from-paper-2/50 to-transparent" aria-hidden />
-      <FlyingSwallows />
+      <FlyingSwallows variant="hero" />
 
       <Container className="relative pb-14 pt-14 lg:pb-20 lg:pt-20">
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">

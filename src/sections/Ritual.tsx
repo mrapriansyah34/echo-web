@@ -1,4 +1,5 @@
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { Reveal } from '../components/Reveal'
 import { useLocale } from '../lib/i18n'
 
@@ -7,8 +8,9 @@ export function Ritual() {
   const { ritual } = c
 
   return (
-    <section id="ritual" className="scroll-mt-28 py-20 lg:py-28">
-      <Container>
+    <section id="ritual" className="relative scroll-mt-28 overflow-hidden py-20 lg:py-28">
+      <FlyingSwallows />
+      <Container className="relative">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-5">
             <Reveal>

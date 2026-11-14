@@ -1,5 +1,6 @@
 import { Benefits } from './sections/Benefits'
 import { Brew } from './sections/Brew'
+import { CartToast } from './components/CartToast'
 import { CartDrawer } from './sections/CartDrawer'
 import { Collection } from './sections/Collection'
 import { Cta } from './sections/Cta'
@@ -36,6 +37,7 @@ export function App() {
           </main>
           <Footer />
           <CartDrawer />
+          <CartToast />
         </StoreProvider>
       </LocaleProvider>
     </ThemeProvider>

@@ -4,6 +4,7 @@ import { ArrowUpRight, Check, ShoppingBag } from 'lucide-react'
 import { brand } from '../content'
 import type { Product } from '../content'
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { ProductPlate } from '../components/ProductPlate'
 import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
@@ -175,8 +176,9 @@ export function Collection() {
   const t = c.collection
 
   return (
-    <section id="koleksi" className="scroll-mt-28 py-20 lg:py-28">
-      <Container>
+    <section id="koleksi" className="relative scroll-mt-28 overflow-hidden py-20 lg:py-28">
+      <FlyingSwallows />
+      <Container className="relative">
         <div className="flex flex-col gap-8 border-b border-hair pb-12 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading eyebrow={t.eyebrow} title={t.title} description={t.description} />
           <p className="max-w-xs text-[12px] uppercase leading-relaxed tracking-[0.14em] text-muted lg:text-right">

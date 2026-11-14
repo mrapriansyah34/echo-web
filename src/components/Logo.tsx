@@ -1,12 +1,14 @@
 import { cx } from '../lib/cx'
 import { brand } from '../content'
+import { useLocale } from '../lib/i18n'
 import { PartnerMark } from './PartnerMark'
 
 export function Logo({ className, light = false }: { className?: string; light?: boolean }) {
+  const { c } = useLocale()
   return (
     <a
       href="#top"
-      aria-label={`${brand.name} — kembali ke atas`}
+      aria-label={`${brand.name} — ${c.nav.backToTop}`}
       className={cx('group inline-flex shrink-0 flex-col whitespace-nowrap leading-none', className)}
     >
       <span

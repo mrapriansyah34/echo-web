@@ -1,6 +1,7 @@
 import { Leaf } from 'lucide-react'
 
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { ProductPlate } from '../components/ProductPlate'
 import { Reveal } from '../components/Reveal'
 import { useLocale } from '../lib/i18n'
@@ -10,8 +11,9 @@ export function Story() {
   const { craft, story } = c
 
   return (
-    <section id="cerita" className="scroll-mt-28 border-y border-hair bg-cream py-20 lg:py-28">
-      <Container>
+    <section id="cerita" className="relative scroll-mt-28 overflow-hidden border-y border-hair bg-cream py-20 lg:py-28">
+      <FlyingSwallows />
+      <Container className="relative">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <Reveal y={24}>

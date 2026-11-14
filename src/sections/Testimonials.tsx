@@ -1,4 +1,5 @@
 import { Container } from '../components/Container'
+import { FlyingSwallows } from '../components/FlyingSwallows'
 import { Reveal } from '../components/Reveal'
 import { useLocale } from '../lib/i18n'
 
@@ -7,8 +8,9 @@ export function Testimonials() {
   const { testimonials } = c
 
   return (
-    <section id="testimoni" className="band-dark scroll-mt-28 bg-espresso py-20 text-cream lg:py-28">
-      <Container>
+    <section id="testimoni" className="band-dark relative scroll-mt-28 overflow-hidden bg-espresso py-20 text-cream lg:py-28">
+      <FlyingSwallows />
+      <Container className="relative">
         <div className="flex flex-col gap-6 border-b border-cream/12 pb-12 lg:flex-row lg:items-end lg:justify-between">
           <Reveal>
             <p className="mb-5 text-[11.5px] uppercase tracking-[0.26em] text-gold-soft">{testimonials.eyebrow}</p>
